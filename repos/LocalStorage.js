@@ -65,7 +65,7 @@
 		},
 		findOne: function (id) {
 			if (this.map[id]) {
-				return Graph.parse(this.map[id]);
+				return Graph.parse(this.entity, this.map[id]);
 			} else {
 				return null;
 			}
