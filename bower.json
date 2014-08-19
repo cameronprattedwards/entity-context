@@ -1,0 +1,21 @@
+{
+  "name": "entity-context",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cameronprattedwards/entity-context",
+  "authors": [
+    "Cameron Edwards <cameronprattedwards@gmail.com>"
+  ],
+  "description": "For maintaining the uniqueness of entities and developing repositories",
+  "main": "repos/LocalStorage.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "graphjs": "~0.0.5"
+  }
+}
