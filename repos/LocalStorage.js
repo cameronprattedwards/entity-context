@@ -99,7 +99,8 @@
 			for (var x in props) {
 				output[x] = props[x];
 			}
-			output.map = localStorage.getItem(output.collectionName) || { index: 1 };
+			var str = localStorage.getItem(output.collectionName);
+			output.map = str ? JSON.parse(str) : { index: 1 };
 			output.uniqKey = output.entity.scheme.uniqKey;
 			output.unsaved = [];
 			output.context = output.entity.context = new Context(output.entity);
