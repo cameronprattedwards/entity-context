@@ -90,7 +90,7 @@
 				this.context.add(this.map[id]);
 			}
 
-			localStorage.setItem(this.collectionName, this.map);
+			localStorage.setItem(this.collectionName, JSON.stringify(this.map));
 		},
 		entity: Object,
 		collectionName: "objects",
