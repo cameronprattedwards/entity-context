@@ -94,6 +94,7 @@
 			}
 
 			localStorage.setItem(this.collectionName, JSON.stringify(this.map));
+			this.unsaved.splice(0, this.unsaved.length);
 		},
 		entity: Object,
 		collectionName: "objects",
