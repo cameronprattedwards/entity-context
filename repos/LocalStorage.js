@@ -53,12 +53,14 @@
 
 			outer:
 			for (var x in this.map) {
-				for (var key in predicate) {
-					if (this.map[x][key] !== predicate[key])
-						continue outer;
+				if (x !== "index") {
+					for (var key in predicate) {
+						if (this.map[x][key] !== predicate[key])
+							continue outer;
+					}
+					parsed = Graph.parse(this.entity, this.map[x]);
+					output.push(parsed);
 				}
-				parsed = Graph.parse(this.entity, this.map[x]);
-				output.push(parsed);
 			}
 
 			return output;
