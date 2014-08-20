@@ -102,7 +102,7 @@
 			this.unsaved.splice(0, this.unsaved.length);
 		},
 		remove: function (entity) {
-			delete this.map(entity[this.uniqKey]);
+			delete this.map[entity[this.uniqKey]];
 
 		},
 		entity: Object,
