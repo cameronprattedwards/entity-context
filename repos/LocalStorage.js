@@ -36,6 +36,9 @@
 			} else {
 				throw new Error("Entity doesn't have an ID.");
 			}
+		},
+		remove: function (entity) {
+			delete this.map[entity[this.key]];
 		}
 	};
 
@@ -97,6 +100,10 @@
 
 			localStorage.setItem(this.collectionName, JSON.stringify(this.map));
 			this.unsaved.splice(0, this.unsaved.length);
+		},
+		remove: function (entity) {
+			delete this.map(entity[this.uniqKey]);
+
 		},
 		entity: Object,
 		collectionName: "objects",
