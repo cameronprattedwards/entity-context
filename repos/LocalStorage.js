@@ -1,11 +1,11 @@
 (function (root, factory) {
 	if (typeof define == "function" && define.amd)
-		define([], factory);
+		define(["graphjs/Graph"], factory);
 	else if (typeof exports == "object")
-		module.exports = factory();
+		module.exports = factory(require("graphjs/Graph"));
 	else
-		root.LocalStorageRepo = factory();
-}(this, function () {
+		root.LocalStorageRepo = factory(root.Graph);
+}(this, function (Graph) {
 	function Context(Entity) {
 		this.map = {};
 		this.Entity = Entity;
