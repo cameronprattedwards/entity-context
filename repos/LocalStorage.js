@@ -59,6 +59,7 @@
 							continue outer;
 					}
 					parsed = Graph.parse(this.entity, this.map[x]);
+					this.map[x] = parsed;
 					output.push(parsed);
 				}
 			}
